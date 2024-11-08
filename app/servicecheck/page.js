@@ -19,7 +19,7 @@ const ServiceCheck = () => {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [getData]);
 
   const getData = () => {
     axios

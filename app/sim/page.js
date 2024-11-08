@@ -18,7 +18,7 @@ const Robi = () => {
 
   useEffect(() => {
     getNumber();
-  }, []);
+  }, [getNumber]);
 
   const getNumber = () => {
     axios
@@ -69,7 +69,7 @@ const Robi = () => {
   const deleteNumber = (id) => {
     axios
       .delete("http://localhost:3000/api/number/", { data: { id } })
-      .then((response) => {
+      .then(() => {
         let old = { ...state };
         old.datas = old.datas.filter((item) => item._id !== id);
         setState(old);

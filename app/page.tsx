@@ -1,3 +1,4 @@
+import Image from "next/image";
 import NavBar from "./navbar/page";
 
 export default function Home() {
@@ -13,9 +14,9 @@ export default function Home() {
               <p>sultan tracker</p>
             </div>
           </div>
-          <img
+          <Image
             src="https://sultantracker.com/static/media/City_driver.fd3eed00.svg"
-            alt=""
+            alt="home image"
             className="w-screen h-full"
           />
         </div>
