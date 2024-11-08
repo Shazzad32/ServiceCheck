@@ -2,7 +2,6 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { FaPlus } from "react-icons/fa6";
-import DeleteDevice from "../servicedelete/page";
 import ServiceTable from "../servicetable/page";
 import ServiceForm from "../serviceform/page";
 import ServiceDelete from "../servicedelete/page";
@@ -71,7 +70,7 @@ const ServiceCheck = () => {
   const deleteData = (id) => {
     axios
       .delete("http://localhost:3000/api/service-check/", { data: { id } })
-      .then((response) => {
+      .then(() => {
         let old = { ...state };
         old.datas = old.datas.filter((item) => item._id !== id);
         setState(old);
@@ -97,18 +96,12 @@ const ServiceCheck = () => {
   const onDeleteOpen = (user) => {
     const old = { ...state };
     old.deleteOpen = true;
-    old.selectItem = user; // Make sure `user` is the item to delete
-    console.log("delete click", user); // Log the user to confirm
+    old.selectItem = user;
+    console.log("delete click", user);
     setState(old);
   };
 
   const formClose = () => {
-    const old = { ...state };
-    old.open = false;
-    setState(old);
-  };
-
-  const onEditClose = (user) => {
     const old = { ...state };
     old.open = false;
     setState(old);
@@ -200,7 +193,7 @@ const ServiceCheck = () => {
             {state.datas.map((item, i) => {
               return (
                 <ServiceTable
-                  key={i} // Include a unique key for each item
+                  key={i}
                   item={item}
                   onDeleteOpen={onDeleteOpen}
                   onEditOpen={onEditOpen}

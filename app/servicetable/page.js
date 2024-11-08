@@ -1,6 +1,5 @@
 import { AiOutlineDelete } from "react-icons/ai";
 import { FiEdit } from "react-icons/fi";
-import ServiceDelete from "../servicedelete/page";
 const ServiceTable = ({ item, onDeleteOpen, onEditOpen }) => {
   return (
     <div className="h-14 w-full  flex index shadow-md">

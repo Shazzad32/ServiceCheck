@@ -1,27 +1,7 @@
 "use client";
-import {
-  Autocomplete,
-  Checkbox,
-  FormControlLabel,
-  Modal,
-  TextField,
-  FormGroup,
-  Switch,
-} from "@mui/material";
+import { Autocomplete, Modal, TextField, Switch } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import districtOptions from "../data";
-
-const vehicleTypeOptions = [
-  "Car",
-  "Truck",
-  "Bus",
-  "Bike",
-  "CNG",
-  "Pic-Up",
-  "Trucktor",
-  "Auto",
-  "Ship",
-];
 
 const ServiceForm = ({ open, formClose, selectItem, saveData, updateData }) => {
   const [user, setUser] = useState({

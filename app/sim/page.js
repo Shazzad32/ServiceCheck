@@ -96,11 +96,6 @@ const Robi = () => {
     old.selectItem = item;
     setState(old);
   };
-  const onEditClose = () => {
-    const old = { ...state };
-    old.open = false;
-    setState(old);
-  };
 
   const onDeleteOpen = () => {
     const old = { ...state };
@@ -142,7 +137,7 @@ const Robi = () => {
             <Link href="/servicecheck">Service</Link>
           </button>
         </div>
-        <div className="h-full w-[50%] sm:font-thin  flex items-center justify-center uppercase text-white">
+        <div className="h-full w-[50%]  flex items-center justify-center uppercase text-white">
           welcome to robi Platform
         </div>
         <div className="h-full w-[30%]  flex items-center justify-center gap-4">

@@ -6,7 +6,7 @@ const NavBar = () => {
       <button>
         <Link
           href="/servicecheck"
-          className="p-2 bg-red-500 flex items-center justify-center rounded-md"
+          className="p-2 bg-white text-black flex items-center justify-center rounded-md"
         >
           Service
         </Link>
@@ -15,7 +15,7 @@ const NavBar = () => {
       <button>
         <Link
           href="/sim"
-          className="p-2 bg-red-500 flex items-center justify-center rounded-md"
+          className="p-2 bg-white text-black flex items-center justify-center rounded-md"
         >
           Robi Sim
         </Link>

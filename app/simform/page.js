@@ -1,11 +1,5 @@
 "use client";
-import {
-  Checkbox,
-  FormControlLabel,
-  Modal,
-  Switch,
-  TextField,
-} from "@mui/material";
+import { Modal, Switch, TextField } from "@mui/material";
 import { useState, useEffect } from "react";
 
 const SimForm = ({ open, closeForm, saveNumber, selectItem, updateNumber }) => {
@@ -49,7 +43,6 @@ const SimForm = ({ open, closeForm, saveNumber, selectItem, updateNumber }) => {
         onSubmit={handelSubmit}
         className="h-[55vh] w-[80vw] sm:w-[60vw] md:w-[50vw] lg:w-[35vw] bg-white rounded-md shadow-lg p-4"
       >
-        {/* Header */}
         <div className="h-[15%]  w-full flex justify-center items-center border-b-2 bg-cyan-700 text-white text-lg font-semibold">
           {selectItem ? "Update INformation" : "Enter Sim Number"}
         </div>
